@@ -13,11 +13,19 @@ General design
 - button interface in Arduino
     - unit tested with arduinounit  http://code.google.com/p/arduinounit/
 
+
+To Do List
+==========
+
+Install google
+http://googletest.googlecode.com/svn/trunk/README
+
 Set up dev env/compile
 ======================
 
 Run unit tests
 --------------
+
 
 Run arduino unit tests
 ----------------------
@@ -25,6 +33,13 @@ Run arduino unit tests
 
 Library API
 ===========
+
+Note: there's no "new" operator in Arduino C++ -
+so you can redefine a primitive version of it using malloc
+
+    #define NEW(x,y) *(x=(y*)malloc(sizeof(y)))=y
+
+(from http://forum.arduino.cc/index.php/topic,44159.0.html)
 
 Color
 -----
